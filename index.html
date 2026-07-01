@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>面談ノート 企画書</title>
+<style>
+  :root{
+    --bg:#eef5f8; --sheet:#ffffff; --line:#dce8ee;
+    --text:#3d474d; --sub:#7e8b92;
+    --green:#79b3ca; --green-d:#4a8098; --cream:#eef7fb;
+    --gold:#c8a24e; --rose:#d99a8f;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{
+    font-family:-apple-system,"Hiragino Kaku Gothic ProN","メイリオ",sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.65;
+    padding:24px 16px; -webkit-font-smoothing:antialiased;
+  }
+  .sheet{
+    max-width:900px; margin:0 auto; background:var(--sheet);
+    border:1px solid var(--line); border-radius:20px; overflow:hidden;
+    box-shadow:0 8px 30px rgba(95,127,100,.12);
+  }
+
+  .head{
+    background:linear-gradient(135deg,#9fd0e2,#6ba7c0); color:#fff;
+    padding:30px 34px 26px; position:relative;
+    border-bottom:3px solid var(--gold);
+  }
+  .head .kicker{ font-size:13px; letter-spacing:.2em; opacity:.95; color:#fdf6e3; }
+  .head h1{ font-size:33px; letter-spacing:.06em; margin:6px 0 8px; }
+  .head .tag{ font-size:15px; opacity:.95; font-weight:normal; }
+  .head .paw{ position:absolute; right:28px; top:24px; font-size:40px; opacity:.35; }
+
+  .body{ padding:26px 34px 30px; }
+
+  .wish{
+    background:var(--cream); border-left:5px solid var(--green);
+    border-radius:12px; padding:16px 20px; margin-bottom:26px;
+  }
+  .wish .lead{ font-size:14px; color:var(--sub); margin-bottom:6px; }
+  .wish .q{ font-size:19px; font-weight:bold; color:var(--green-d); }
+  .wish .note{ font-size:14px; color:var(--sub); margin-top:8px; }
+
+  .h{ font-size:15px; font-weight:bold; color:var(--green-d);
+      letter-spacing:.04em; margin:0 0 12px; display:flex; align-items:center; gap:8px; }
+  .h::before{ content:""; width:8px; height:8px; border-radius:50%; background:var(--gold); }
+  .sec{ margin-bottom:24px; }
+
+  .three{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
+  .fcard{ background:#fff; border:1px solid var(--line); border-radius:14px; padding:14px; text-align:center; }
+  .fcard .ico{ font-size:28px; }
+  .fcard .t{ font-size:15px; font-weight:bold; margin:6px 0 4px; }
+  .fcard .d{ font-size:12.5px; color:var(--sub); line-height:1.5; }
+
+  .flow{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+  .step{ background:var(--cream); border-radius:12px; padding:12px 12px 14px; position:relative; }
+  .step .num{ font-size:12px; font-weight:bold; color:#fff; background:var(--green);
+    width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:8px; }
+  .step .st{ font-size:13.5px; font-weight:bold; margin-bottom:4px; }
+  .step .sd{ font-size:12px; color:var(--sub); line-height:1.5; }
+  .step .items{ font-size:11.5px; color:var(--green-d); margin-top:6px; line-height:1.7; }
+
+  .future{ display:grid; grid-template-columns:1fr 1fr; gap:8px 22px; }
+  .future li{ list-style:none; font-size:14px; padding-left:22px; position:relative; }
+  .future li::before{ content:"🌱"; position:absolute; left:0; font-size:13px; }
+
+  .bottom{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:4px; }
+  .mini{ background:#fff; border:1px solid var(--line); border-radius:14px; padding:14px 16px; }
+  .mini .mt{ font-size:14px; font-weight:bold; color:var(--green-d); margin-bottom:8px; }
+  .mini .md{ font-size:12.5px; color:var(--sub); line-height:1.7; }
+  .mini .md b{ color:var(--text); }
+
+  .foot{ text-align:center; font-size:12px; color:var(--sub); padding:6px 0 2px; }
+
+  @media (max-width:640px){
+    .three,.flow,.future{ grid-template-columns:1fr; }
+    .bottom{ grid-template-columns:1fr; }
+    .head h1{ font-size:27px; }
+  }
+  @media print{
+    body{ background:#fff; padding:0; }
+    .sheet{ border:none; box-shadow:none; border-radius:0; max-width:100%; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="head">
+    <div class="paw">🐾</div>
+    <div class="kicker">企 画 書</div>
+    <h1>面談ノート</h1>
+    <div class="tag">心をこめて聴く時間を、もっと自由に。<br>あとは AI が、そっと形にしてくれる。</div>
+  </div>
+
+  <div class="body">
+
+    <div class="wish">
+      <div class="lead">― この道具に込めた願い ―</div>
+      <div class="q">「メモは道具にまかせて、私は“聴くこと”に、まっすぐ集中したい。」</div>
+      <div class="note">スタッフ一人ひとりとの面談は、信頼が育つ大切な時間。<br>
+      手を止めて、目の前の人に心を向ける。書く時間が、聴く時間に変わります。</div>
+    </div>
+
+    <div class="sec">
+      <div class="h">この道具が、してくれること</div>
+      <div class="three">
+        <div class="fcard">
+          <div class="ico">🎙️</div>
+          <div class="t">話すと、文字に</div>
+          <div class="d">面談中は、聴くことに集中。話した言葉が自動で文字になります。</div>
+        </div>
+        <div class="fcard">
+          <div class="ico">✨</div>
+          <div class="t">AIが要点に整理</div>
+          <div class="d">あとで、大切な言葉をやさしく項目分け。見やすい形に。</div>
+        </div>
+        <div class="fcard">
+          <div class="ico">📚</div>
+          <div class="t">その人ごとに積み重なる</div>
+          <div class="d">スタッフごとに記録が残り、いつでも見返せます。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="h">使う流れ</div>
+      <div class="flow">
+        <div class="step">
+          <div class="num">1</div>
+          <div class="st">面談の前</div>
+          <div class="sd">スタッフの名前を選ぶ（はじめての人は登録）</div>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <div class="st">面談中</div>
+          <div class="sd">「聞き取りスタート」を押して、あとは心をこめて聴くだけ。言葉が自動で文字に。</div>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <div class="st">面談のあと｜AIが整理</div>
+          <div class="sd">ボタンひとつで、AIが大切なポイントを項目分け。</div>
+          <div class="items">・今の状態・気持ち<br>・輝いていること<br>・抱えていること／相談<br>・希望・アイデア<br>・これから一緒にすること</div>
+        </div>
+        <div class="step">
+          <div class="num">4</div>
+          <div class="st">これから</div>
+          <div class="sd">記録が積み重なり、次の面談は「続きから」もっと深い話へ。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="h">この道具が生む、うれしい未来</div>
+      <ul class="future">
+        <li>面談中、相手にまっすぐ向き合える</li>
+        <li>大切な言葉が、すっきり見やすい要点に</li>
+        <li>記録が、その人だけの成長の物語に</li>
+        <li>一人ひとりの変化を、あたたかく見守れる</li>
+        <li>面談が、もっと深く、あたたかい時間に</li>
+        <li>信頼とチームの絆が、育っていく</li>
+      </ul>
+    </div>
+
+    <div class="bottom">
+      <div class="mini">
+        <div class="mt">🔒 大事にすること（プライバシー）</div>
+        <div class="md">記録は<b>インターネットに出さず、使う機械1台の中だけ</b>に大切にしまいます。
+        AIに整理をお願いするときだけ外にわたすので、<b>名前は伏せて</b>、<b>選んだ分だけ</b>わたします。</div>
+      </div>
+      <div class="mini">
+        <div class="mt">💻 使う機械について</div>
+        <div class="md"><b>ノートパソコン</b>…机に置いて使え、文字にする力も高め ◎<br>
+        <b>スマホ</b>…手軽。機種により文字化が少し苦手なことも。<br>
+        ※記録は「使う1台」の中に積み重なります。</div>
+      </div>
+    </div>
+
+    <div class="foot">🐾 スタッフ一人ひとりを、もっと大切に。</div>
+
+  </div>
+</div>
+</body>
+</html>
